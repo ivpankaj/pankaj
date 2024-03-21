@@ -1,0 +1,203 @@
+
+
+.navbar li{
+    list-style: none;
+    font-size: 28px;
+    font-style: bold;
+    font-weight: 600;
+    color: white;
+    margin-top: 20px;
+   
+    
+   
+  
+}
+
+/* .navbar li:hover{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: black;
+   padding: 8px;
+   font-size: 28px;
+} */
+.navbar ul{
+    display: flex;
+    gap: 90px;
+
+}
+.navbar .navt{
+    text-decoration: none;
+    color: white;
+}
+.navbar .navt:hover{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 8px;
+    font-size: 28px;
+    
+}
+.navbar{
+    background-color: black;
+    height: 90px;
+    margin: auto;
+    margin-bottom:-60px;
+    margin-top: -20px;
+    
+}
+.navbar nav{
+    margin-bottom: 10px;
+}
+.home{
+    background-color: black;
+    height: 100vh;
+
+    margin-top: -16px;
+    /* position: absolute; */
+    
+    
+}
+.front{
+    background-color: black;
+    width: 50%;
+    height: 600px;
+
+}
+.front h1{
+    color: whitesmoke;
+    margin-top: 60px;
+    font-size: 50px;
+    margin-left: 20px;
+}
+.front h2{
+    color: whitesmoke;
+    font-size: 45px;
+    margin-left: 19px;
+    margin-bottom: 10px;
+}
+.front h2 span{
+    color: red;
+}
+.front p{
+    color: white;
+    margin-left: 25px;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+.social-media p{
+    color: white;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.social-media .follow-me{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 8px;
+   margin-left: 10px;
+}
+.social-media .follow-me:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    border-radius: 20px;
+
+    margin-left: 10px;
+   
+}
+.links .facebook{
+    background-color: blue;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 33px;
+    font-size: 20px;
+}
+.links .facebook:hover{
+    background-color:white;
+    color: blue;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 33px;
+    font-size: 20px;
+}
+.links .Instagram{
+    background-color: red;
+    color: white;
+    border-radius: 23px;
+    border: 2px solid white;
+    padding: 2px;
+    font-size: 40px;
+    width: 80px;
+}
+.links .Instagram:hover{
+    background-color:white;
+    color: red;
+    border-radius: 33px;
+    border: 2px solid white;
+    padding: 8px;
+    font-size: 40px;
+}
+.links .Linkdin{
+    background-color: blue;
+    color: white;
+    border-radius: 23px;
+    border: 2px solid white;
+    padding: 2px;
+    font-size: 40px;
+    width: 80px;
+
+}
+.links .Linkdin:hover{
+    background-color:white;
+    color: blue;
+    border-radius: 33px;
+    border: 2px solid white;
+    padding: 8px;
+    font-size: 40px;
+}
+.links .Github{
+    background-color: black;
+    color: white;
+    border-radius: 23px;
+    border: 2px solid white;
+    padding: 2px;
+    font-size: 40px;
+    width: 80px;
+
+}
+.links .Github:hover{
+    background-color: white;
+    color: black;
+    border-radius: 33px;
+    border: 2px solid white;
+    padding: 8px;
+    font-size: 40px;
+}
+.links{
+   display: flex;
+   gap: 40px;
+   margin-left: 15px
+
+}
+
+
+.img{
+    float: right;
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    margin-right: 50px;
+    border: 2px solid white;
+    border-radius: 23px;
+    
+    
+}
+img{
+    margin-left: 5px;
+    margin-top: 8px;
+    border-radius: 23px;
+}
