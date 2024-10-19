@@ -1,6 +1,4 @@
-import React from "react";
-import "../Contact/Contact.css";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
   const [user, setUser] = useState({
@@ -9,17 +7,15 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  let name, value;
-  const getUserData = (event) => {
-    name = event.target.name;
-    value = event.target.value;
 
+  const getUserData = (event) => {
+    const { name, value } = event.target;
     setUser({ ...user, [name]: value });
   };
 
   const postData = async (e) => {
     e.preventDefault();
-    const { name,phone, email, message } = user;
+    const { name, phone, email, message } = user;
 
     const res = await fetch(
       "https://portfolio-db2bf-default-rtdb.firebaseio.com/portdata.json",
@@ -36,73 +32,77 @@ const Contact = () => {
         }),
       }
     );
-    if(res){
+
+    if (res) {
       setUser({
         name: "",
         phone: "",
         email: "",
         message: "",
-      })
-
-      alert("Data has been sent successfully")
+      });
+      alert("Data has been sent successfully");
     }
   };
+
   return (
-    <div className="contact">
-      <h1>Contact me </h1>
-
-      <div className="form">
-        <h1 className="form-text">Connect here!</h1>
-
-        <form method="POST">
-          <div className="input1">
-            <h2>
-              Name:{" "}
+    <div className="h-screen bg-black text-white flex flex-col items-center py-8">
+      <h1 className="text-4xl mb-6">Contact me</h1>
+      <div className="w-11/12 md:w-3/4 lg:w-2/3 bg-black border-2 border-white rounded-3xl p-8">
+     
+        <form onSubmit={postData} className="flex flex-col gap-6">
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex flex-col w-full">
+              <label className="text-xl mb-2">Name:</label>
               <input
-                className="name"
+                className="p-3 bg-black border-2 border-white rounded-3xl text-white placeholder-gray-400"
                 type="text"
                 name="name"
                 placeholder="Enter your name"
                 value={user.name}
                 onChange={getUserData}
                 required
-              />{" "}
-            </h2>
-            <h2>
-              Phone No:{" "}
+              />
+            </div>
+            <div className="flex flex-col w-full">
+              <label className="text-xl mb-2">Phone No:</label>
               <input
-                className="ph"
+                className="p-3 bg-black border-2 border-white rounded-3xl text-white placeholder-gray-400"
                 type="text"
                 name="phone"
                 placeholder="Enter your Phone No."
                 value={user.phone}
                 onChange={getUserData}
-              />{" "}
-            </h2>
-            <h2>
-              E-mail:{" "}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex flex-col w-full">
+              <label className="text-xl mb-2">E-mail:</label>
               <input
-                className="mail"
+                className="p-3 bg-black border-2 border-white rounded-3xl text-white placeholder-gray-400"
                 type="text"
                 name="email"
                 placeholder="Enter your E-mail"
                 value={user.email}
                 onChange={getUserData}
-              />{" "}
-            </h2>
+              />
+            </div>
           </div>
-          <div className="input2">
-            <input
-              className="place"
-              type="text"
+          <div className="flex flex-col w-full">
+            <label className="text-xl mb-2">Message:</label>
+            <textarea
+              className="p-3 bg-black border-2 border-white rounded-3xl text-white placeholder-gray-400 h-48"
               name="message"
               placeholder="Any suggestions"
               value={user.message}
               onChange={getUserData}
             />
           </div>
-          <button onClick={postData} className="submit">
-            submit
+          <button
+            type="submit"
+            className="self-end px-6 py-3 mt-4 bg-black border-2 border-white rounded-3xl hover:bg-white hover:text-black transition-colors"
+          >
+            Submit
           </button>
         </form>
       </div>
