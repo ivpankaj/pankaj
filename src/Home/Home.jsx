@@ -18,7 +18,7 @@ const Home = () => {
           <img
             src="/pankaj.png"
             alt="Pankaj"
-            className="w-72 h-72 rounded-full border-4 border-white shadow-lg transition-transform transform hover:scale-105"
+            className="w-72 h-72 rounded-3xl border-4 border-white shadow-lg transition-transform transform hover:scale-105"
           />
         </div>
         <div className="text-center md:text-left md:w-1/2 px-4">

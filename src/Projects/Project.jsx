@@ -2,7 +2,7 @@ import React from "react";
 
 const Project = () => {
   return (
-    <div className="text-white min-h-screen  py-12">
+    <div className="text-white min-h-screen bg-black  py-12">
       <h1 className="text-center text-4xl font-bold mb-12">My Projects</h1>
       <div className="container mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6">
         <div className="bg-black border border-white rounded-3xl text-center p-6 transform transition duration-500 hover:scale-105">

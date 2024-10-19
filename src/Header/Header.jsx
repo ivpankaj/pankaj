@@ -13,7 +13,7 @@ const Header = () => {
     <div className="bg-black h-24 sm:h-20 md:h-24 flex items-center justify-between px-4">
      
       <nav className={`absolute top-24 left-0 w-full bg-black sm:static sm:flex ${isMenuOpen ? 'block' : 'hidden'} sm:block`}>
-        <ul className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16 lg:gap-20 items-center">
+        <ul className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16 lg:gap-20 items-center bg-black">
           <li>
             <Link
               to="/"
