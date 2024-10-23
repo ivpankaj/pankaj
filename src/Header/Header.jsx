@@ -10,9 +10,15 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-black h-24 sm:h-20 md:h-24 flex items-center justify-between px-4">
-     
-      <nav className={`absolute top-24 left-0 w-full bg-black sm:static sm:flex ${isMenuOpen ? 'block' : 'hidden'} sm:block`}>
+    <div className="bg-black h-24 sm:h-20 md:h-24 flex items-center justify-between px-4 relative">
+      <div className="text-white text-2xl font-bold">Logo</div>
+      
+      {/* Navigation Menu */}
+      <nav
+        className={`absolute top-24 left-0 w-full bg-black sm:static sm:flex z-50 transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'block' : 'hidden'
+        } sm:block`}
+      >
         <ul className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16 lg:gap-20 items-center bg-black">
           <li>
             <Link
@@ -48,9 +54,11 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+
+      {/* Menu Button for small screens */}
       <button
         onClick={toggleMenu}
-        className="text-white sm:hidden text-3xl focus:outline-none"
+        className="text-white sm:hidden text-3xl focus:outline-none z-50"
       >
         {isMenuOpen ? <FaTimes /> : <FaBars />}
       </button>
