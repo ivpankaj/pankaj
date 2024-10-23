@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <div className="bg-black h-24 sm:h-20 md:h-24 flex items-center justify-between px-4 relative">
-      <div className="text-white text-2xl font-bold">Logo</div>
+      
       
       {/* Navigation Menu */}
       <nav
