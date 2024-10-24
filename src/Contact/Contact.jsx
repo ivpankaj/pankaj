@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FiUser, FiPhone, FiMail, FiMessageSquare } from "react-icons/fi"; // Import icons
 
 const Contact = () => {
   const [user, setUser] = useState({
@@ -45,14 +46,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen bg-black text-white flex flex-col items-center py-8">
+    <div className="h-screen bg-black text-white flex flex-col items-center">
       <h1 className="text-4xl mb-6">Contact me</h1>
       <div className="w-11/12 md:w-3/4 lg:w-2/3 bg-black border-2 border-white rounded-3xl p-8">
-     
         <form onSubmit={postData} className="flex flex-col gap-6">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-col w-full">
-              <label className="text-xl mb-2">Name:</label>
+              <label className="text-xl mb-2 flex items-center">
+                <FiUser className="mr-2 text-blue-400" /> Name:
+              </label>
               <input
                 className="p-3 bg-black border-2 border-white rounded-3xl text-white placeholder-gray-400"
                 type="text"
@@ -64,7 +66,9 @@ const Contact = () => {
               />
             </div>
             <div className="flex flex-col w-full">
-              <label className="text-xl mb-2">Phone No:</label>
+              <label className="text-xl mb-2 flex items-center">
+                <FiPhone className="mr-2 text-green-400" /> Phone No:
+              </label>
               <input
                 className="p-3 bg-black border-2 border-white rounded-3xl text-white placeholder-gray-400"
                 type="text"
@@ -77,7 +81,9 @@ const Contact = () => {
           </div>
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-col w-full">
-              <label className="text-xl mb-2">E-mail:</label>
+              <label className="text-xl mb-2 flex items-center">
+                <FiMail className="mr-2 text-red-400" /> E-mail:
+              </label>
               <input
                 className="p-3 bg-black border-2 border-white rounded-3xl text-white placeholder-gray-400"
                 type="text"
@@ -89,7 +95,9 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex flex-col w-full">
-            <label className="text-xl mb-2">Message:</label>
+            <label className="text-xl mb-2 flex items-center">
+              <FiMessageSquare className="mr-2 text-yellow-400" /> Message:
+            </label>
             <textarea
               className="p-3 bg-black border-2 border-white rounded-3xl text-white placeholder-gray-400 h-48"
               name="message"
