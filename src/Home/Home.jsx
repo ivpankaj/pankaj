@@ -1,10 +1,6 @@
 import React from "react";
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp, FaSnapchat, FaTelegram } from "react-icons/fa"; // Icons for popular platforms
+import { SiLeetcode, SiCodechef } from "react-icons/si"; // Icons for LeetCode and CodeChef
 
 const Home = () => {
   const showAlert = () => {
@@ -49,7 +45,7 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="text-white text-3xl p-3 rounded-full bg-red-500 hover:bg-red-600 transition-transform transform hover:scale-110"
               >
-                <FontAwesomeIcon icon={faInstagram} />
+                <FaInstagram />
               </a>
               <a
                 href="https://www.linkedin.com/in/ivpankaj15"
@@ -57,7 +53,7 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="text-white text-3xl p-3 rounded-full bg-blue-500 hover:bg-blue-600 transition-transform transform hover:scale-110"
               >
-                <FontAwesomeIcon icon={faLinkedin} />
+                <FaLinkedin />
               </a>
               <a
                 href="https://github.com/ivpankaj"
@@ -65,8 +61,19 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="text-white text-3xl p-3 rounded-full bg-gray-800 hover:bg-gray-900 transition-transform transform hover:scale-110"
               >
-                <FontAwesomeIcon icon={faGithub} />
+                <FaGithub />
               </a>
+              <a
+                href="https://leetcode.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white text-3xl p-3 rounded-full bg-orange-500 hover:bg-orange-600 transition-transform transform hover:scale-110"
+              >
+                <SiLeetcode />
+              </a>
+             
+           
+            
             </div>
           </div>
         </div>
